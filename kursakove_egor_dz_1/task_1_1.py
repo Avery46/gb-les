@@ -73,4 +73,42 @@ elif duration >= year:
     print('{} год {} нед {} дн {} час {} мин {} сек'.format(new_year, new_week, new_day, new_hour, new_minute, new_sec)); 
 
     
+    cubes = [x**3 for x in range (100) if  x%2 != 0 ]
+print('Cоздан список кубов нечётных чисел {}'.format(cubes))
+my_numbers_sum = 0
+my_numbers_sum_list=[]
+
+
+for i in range(len(cubes)):
+  
+    my_str = str(cubes[i])
+    my_list = list(my_str)
+  
+    for i in range(len(my_list)):
+        my_list[i] = int(my_list[i])
+   
+    
+    my_numbers_sum = sum(my_list)
+    print(my_numbers_sum)
+    
+    if my_numbers_sum % 7 == 0:
+        print('Cумму чисел, делящихся на 7 : ',my_numbers_sum)
+        my_numbers_sum_list.append(my_numbers_sum)
+
+print('Список чисел, делящихся на 7: ',my_numbers_sum_list)
+
+
+
+for i in range(100):
+    new_str=str(i+1)
+    new_list = list(new_str)
+    if int(new_list[-1])==1 and i+1!=11:
+        print('{} процент'.format(i + 1))
+    elif int(new_list[-1])>1 and int(new_list[-1])<= 4:
+        if  i+1> 10 and i+1<= 14:
+            print('{} процентов'.format(i + 1))
+        else:
+            print('{} процента'.format(i + 1))
+    else:
+        print('{} процентов'.format(i + 1))
 
